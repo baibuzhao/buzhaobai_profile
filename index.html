@@ -39,7 +39,7 @@
       .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
       .button { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border: 1px solid var(--ink); border-radius: 999px; background: var(--ink); color: var(--paper); text-decoration: none; font-weight: 700; }
       .button.secondary { background: transparent; color: var(--ink); }
-      .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+      .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; } .contact-tag { text-decoration: none; color: var(--ink); } .contact-tag:hover { color: var(--accent); border-color: var(--accent); }
       .tag { padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: 13px; }
       .portrait-placeholder { min-height: 480px; display: grid; place-items: center; padding: 24px; border: 1.5px solid var(--ink); border-radius: 180px 180px 18px 18px; background: var(--sage); box-shadow: 12px 12px 0 var(--yellow); text-align: center; }
       .portrait-placeholder strong { display: block; font-size: 26px; }
@@ -116,11 +116,7 @@
           <p class="eyebrow">AI PRODUCT · PERSONAL SITE</p>
           <h1>你好，我是白步兆。<br /><em>把想法</em>做成真实的产品。</h1>
           <p class="hero-copy">AI 产品经理，电子科技大学计算机软件工程背景，正在用产品思维把 AI 能力做成真实可用的体验。</p>
-          <div class="hero-actions">
-            <a class="button" href="#projects">查看代表项目 ↓</a>
-            <a class="button secondary" href="#contact">联系我 ↗</a>
-          </div>
-          <div class="hero-tags"><span class="tag">AI 产品经理</span><span class="tag">持续学习</span><span class="tag">认真生活</span></div>
+          <div class="hero-tags"><span class="tag">AI 产品经理</span><span class="tag">持续学习</span><span class="tag">认真生活</span><a class="tag contact-tag" href="#contact">联系我 ↗</a></div>
         </div>
         <div class="portrait-placeholder"><div><strong>照片占位区</strong><span>后续可替换为你的个人照片或视觉素材</span></div></div>
       </section>
