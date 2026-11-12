@@ -147,7 +147,7 @@
       <section class="section" id="vibe">
         <div class="section-heading"><div><h2>旅行见闻</h2></div></div>
         <div class="travel-grid">
-          <article class="project travel-card"><img src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/c657396761cbb430c69396db1ac90c28.jpg" alt="欧洲旅行照片" /><h3>欧洲深度游</h3></article>
+          <article class="project travel-card"><div class="travel-photo-carousel"><div class="travel-photo-track"><img class="travel-photo-slide" src="photos/40b2c791ae4b230c69396db1ac90c28.jpg" alt="欧洲旅行照片 1" loading="eager" decoding="async" /><img class="travel-photo-slide" src="photos/c657396761cbb430c69396db1ac90c28.jpg" alt="欧洲旅行照片 2" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/46a628cdc798fa14163a6849976a927c.jpg" alt="欧洲旅行照片 3" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/71f6a0002e23486d2c0f45f758fa610e.jpg" alt="欧洲旅行照片 4" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/73b8bc62cf3da0dfe35a23cdf47af97d.jpg" alt="欧洲旅行照片 5" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/78eb32ef7e73a27ff36f7c78d3b536b2.jpg" alt="欧洲旅行照片 6" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/1936e1f589b41d8a9ffc0c64e52c1da4.jpg" alt="欧洲旅行照片 7" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/2687d566d35d4ba8458cd717039ae4b1.jpg" alt="欧洲旅行照片 8" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/111199d1f94cb8f81bd816e325f0c605.jpg" alt="欧洲旅行照片 9" loading="lazy" decoding="async" /><img class="travel-photo-slide" src="photos/135195928b2418ba4dbd7660f7c597bd.jpg" alt="欧洲旅行照片 10" loading="lazy" decoding="async" /></div><div class="travel-photo-controls"><button type="button" data-travel-dir="-1" aria-label="上一张">←</button><button type="button" data-travel-dir="1" aria-label="下一张">→</button></div></div><h3>欧洲深度游</h3></article>
           <article class="project travel-card"><img src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/111199d1f94cb8f81bd816e325f0c605.jpg" alt="东京旅行照片" /><h3>东京大湾区</h3></article>
           <article class="project travel-card"><img src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/46a628cdc798fa14163a6849976a927c.jpg" alt="粤港澳旅行照片" /><h3>粤港澳大湾区</h3></article>
           <article class="project travel-card"><img src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/73b8bc62cf3da0dfe35a23cdf47af97d.jpg" alt="江浙沪旅行照片" /><h3>江浙沪深度游</h3></article>
@@ -170,6 +170,21 @@
         const track = button.closest('.photo-carousel').querySelector('.photo-track');
         track.scrollBy({ left: button.dataset.photoDir * track.clientWidth, behavior: 'smooth' });
       }));
+      document.querySelectorAll('.travel-photo-carousel').forEach((carousel) => {
+        const track = carousel.querySelector('.travel-photo-track');
+        let timer;
+        let paused = false;
+        const advance = (direction = 1) => {
+          const next = track.scrollLeft + direction * track.clientWidth;
+          const max = track.scrollWidth - track.clientWidth;
+          track.scrollTo({ left: next > max ? 0 : next < 0 ? max : next, behavior: 'smooth' });
+        };
+        carousel.querySelectorAll('[data-travel-dir]').forEach((button) => button.addEventListener('click', () => advance(Number(button.dataset.travelDir))));
+        const start = () => { clearInterval(timer); timer = setInterval(() => { if (!paused) advance(1); }, 3200); };
+        carousel.addEventListener('mouseenter', () => { paused = true; });
+        carousel.addEventListener('mouseleave', () => { paused = false; });
+        start();
+      });
       document.querySelectorAll('.photo-carousel').forEach((carousel) => {
         const track = carousel.querySelector('.photo-track');
         let timer;
