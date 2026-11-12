@@ -48,8 +48,8 @@
       .section-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 44px; }
       h2 { margin-bottom: 0; font-size: clamp(38px, 5vw, 68px); line-height: 1.08; letter-spacing: -.04em; font-weight: 600; }
       .section-intro { max-width: 480px; color: var(--muted); font-size: 17px; line-height: 1.8; }
-      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-      .card { min-height: 245px; padding: 26px; border: 1px solid var(--ink); border-radius: 18px; background: #123e55; }
+      .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .card { min-height: 245px; padding: 26px; border: 1px solid var(--ink); border-radius: 18px; background: #123e55; } .education-card { display: grid; grid-template-columns: 42% 1fr; gap: 24px; align-items: stretch; padding: 0; overflow: hidden; } .education-card img { width: 100%; height: 100%; min-height: 245px; object-fit: cover; display: block; } .education-card p { align-self: center; padding: 26px 26px 26px 0; line-height: 1.8; }
       .card:nth-child(2) { background: var(--sage); }
       .card:nth-child(3) { background: #1b526b; }
       .card small { color: var(--muted); font: 12px ui-monospace, SFMono-Regular, monospace; letter-spacing: .1em; }
@@ -116,8 +116,8 @@
       <section class="section" id="coordinates">
         <div class="section-heading"><div><h2>教育背景</h2></div></div>
         <div class="cards">
-          <article class="card"><p>电子科技大学 计算机软件 本科<br />985院校 中国民族电子工业摇篮</p></article>
-          <article class="card"><p>东京大学 计算机软件 交换生<br />QS28 曾亚洲排名第一</p></article>
+          <article class="card education-card"><img src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/uestc.jpg" alt="电子科技大学校园" /><p>电子科技大学 计算机软件 本科<br />985院校 中国民族电子工业摇篮</p></article>
+          <article class="card education-card"><img src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/tokyo-university.jpg" alt="东京大学校园" /><p>东京大学 计算机软件 交换生<br />QS28 曾亚洲排名第一</p></article>
         </div>
       </section>
 
@@ -132,9 +132,9 @@
       <section class="section" id="projects">
         <div class="section-heading"><div><h2>兴趣爱好</h2></div><p class="section-intro">每个项目都会拆解问题、判断、方案、取舍与结果，而不是只展示漂亮的结论。</p></div>
         <div class="project-grid">
-          <article class="project"><small>PROJECT 01</small><h3>读书</h3><p>问题是什么？我如何判断？方案与结果将在这里展开。</p><a class="project-link" href="#contact">后续补充 ↗</a></article>
-          <article class="project"><small>PROJECT 02</small><h3>滑雪</h3><p>从用户需求、业务目标到策略取舍，完整保留决策过程。</p><a class="project-link" href="#contact">后续补充 ↗</a></article>
-          <article class="project"><small>PROJECT 03</small><h3>公益</h3><p>展示 AI 产品场景中的判断、协作与最终结果。</p><a class="project-link" href="#contact">后续补充 ↗</a></article>
+          <article class="project"><h3>读书</h3><p>问题是什么？我如何判断？方案与结果将在这里展开。</p></article>
+          <article class="project"><h3>滑雪</h3><p>从用户需求、业务目标到策略取舍，完整保留决策过程。</p><a class="project-link" href="#contact">后续补充 ↗</a></article>
+          <article class="project"><h3>公益</h3><p>展示 AI 产品场景中的判断、协作与最终结果。</p><a class="project-link" href="#contact">后续补充 ↗</a></article>
         </div>
       </section>
 
