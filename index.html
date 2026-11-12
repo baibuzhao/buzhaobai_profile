@@ -78,8 +78,8 @@
       .life-card:nth-child(3) { background: #245f76; }
       .life-card h3 { margin-top: 90px; font-size: 26px; font-weight: 600; }
       .contact { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; padding-bottom: 110px; }
-      .contact h2 { max-width: 650px; }
-      .contact-link { font-size: 20px; font-weight: 700; text-decoration: none; } .contact-details { display: grid; gap: 10px; } .contact-details a, .contact-details span { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 4px; } .contact-details a:hover { color: var(--accent); }
+      .contact h2 { max-width: 650px; font-size: clamp(19px, 2.5vw, 34px); }
+      .contact-link { font-size: 20px; font-weight: 700; text-decoration: none; } .contact-details { display: grid; gap: 10px; } .contact-details a, .contact-details span { color: var(--ink); text-decoration: none; padding-bottom: 4px; } .contact-details a:hover { color: var(--accent); }
       footer { padding: 24px 5vw; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; }
       @media (max-width: 820px) {
         .site-header { align-items: flex-start; }
@@ -155,7 +155,7 @@
       </section>
 
       <section class="section contact" id="contact">
-        <div><p class="section-label">NEXT COORDINATE</p><h2>如果你也喜欢产品、AI 和真实生活，欢迎认识我。</h2></div>
+        <div><h2>如果你也喜欢产品、AI 和真实生活，欢迎认识我。</h2></div>
         <div class="contact-link contact-details"><a href="mailto:baibuzhao@gmail.com">邮箱：baibuzhao@gmail.com</a><a href="tel:18428118198">电话：18428118198</a><span>抖音：B205189859</span></div>
       </section>
     </main>
