@@ -96,7 +96,11 @@
         h1 { font-size: 50px; }
         .section { padding: 64px 0; }
       }
-    .travel-card-carousel { height: 300px; min-height: 0; border: 0; border-radius: 0; box-shadow: none; } .travel-card-carousel .photo-track { height: 100%; } .travel-card-carousel .photo-slide { height: 100%; }\n    </style>
+    .travel-card-carousel { height: 300px; min-height: 0; border: 0; border-radius: 0; box-shadow: none; } .travel-card-carousel .photo-track { height: 100%; } .travel-card-carousel .photo-slide { height: 100%; }\n    
+      .back-to-top { position: fixed; top: 76px; right: 24px; z-index: 20; display: none; align-items: center; justify-content: center; width: 42px; height: 42px; border: 1px solid var(--ink); border-radius: 50%; background: rgba(8, 34, 54, .86); color: var(--ink); font-size: 20px; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.2); transition: opacity .2s ease, transform .2s ease; }
+      .back-to-top.visible { display: inline-flex; }
+      .back-to-top:hover { background: var(--accent); transform: translateY(-2px); }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -201,6 +205,12 @@
         carousel.addEventListener('focusout', () => { paused = false; });
         start();
       });
+      const backToTop = document.querySelector('.back-to-top');
+      const updateBackToTop = () => backToTop.classList.toggle('visible', window.scrollY > 240);
+      window.addEventListener('scroll', updateBackToTop, { passive: true });
+      backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      updateBackToTop();
     </script>
+      <button class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部">↑</button>
   </body>
 </html>
