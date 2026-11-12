@@ -21,7 +21,7 @@
       html { scroll-behavior: smooth; }
       body { margin: 0; background: var(--paper); color: var(--ink); }
       a { color: inherit; }
-      .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 5vw; background: rgba(11, 45, 66, .94); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
+      .site-header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: flex-end; gap: 16px; padding: 10px 5vw; background: rgba(11, 45, 66, .94); border-bottom: 1px solid var(--line); backdrop-filter: blur(10px); }
       .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
       .brand-mark { display: grid; place-items: center; width: 44px; height: 44px; border: 1.5px solid var(--ink); border-radius: 50%; background: var(--accent); font-size: 20px; }
       .brand-name { font-size: 20px; font-weight: 700; }
@@ -96,10 +96,6 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top">
-        <span class="brand-mark">白</span>
-        <span><span class="brand-name">个人网站</span><span class="brand-sub">PERSONAL SITE · AI PRODUCT</span></span>
-      </a>
       <nav aria-label="主导航">
         <a href="#coordinates">我的坐标</a>
         <a href="#experience">实习路线</a>
@@ -114,7 +110,7 @@
       <section class="hero">
         <div>
           <p class="eyebrow">AI PRODUCT · PERSONAL SITE</p>
-          <h1>我是白步兆，<br /><em>用 AI 把想法</em>做成有价值的产品。</h1>
+          <h1>我是白步兆，<br /><em>一个最有想法的 AI 产品经理。</em></h1>
           <div class="hero-tags"><span class="tag">AI 产品经理</span><span class="tag">持续学习</span><span class="tag">认真生活</span><a class="tag contact-tag" href="#contact">联系我 ↗</a></div>
         </div>
         <div class="portrait-placeholder photo-carousel"><div class="photo-track"><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/c657396761cbb430c69396db1ac90c28.jpg" alt="个人旅行照片 10" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/135195928b2418ba4dbd7660f7c597bd.jpg" alt="个人旅行照片 9" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/111199d1f94cb8f81bd816e325f0c605.jpg" alt="个人旅行照片 8" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/2687d566d35d4ba8458cd717039ae4b1.jpg" alt="个人旅行照片 7" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/1936e1f589b41d8a9ffc0c64e52c1da4.jpg" alt="个人旅行照片 6" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/78eb32ef7e73a27ff36f7c78d3b536b2.jpg" alt="个人旅行照片 5" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/73b8bc62cf3da0dfe35a23cdf47af97d.jpg" alt="个人旅行照片 4" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/71f6a0002e23486d2c0f45f758fa610e.jpg" alt="个人旅行照片 3" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/40b2c791ae4b2302524b7cb104bf8e03.jpg" alt="个人旅行照片 2" loading="lazy" /><img class="photo-slide" src="https://raw.githubusercontent.com/baibuzhao/buzhaobai_profile/main/photos/46a628cdc798fa14163a6849976a927c.jpg" alt="个人旅行照片 1" loading="eager" /></div><div class="photo-controls"><button type="button" data-photo-dir="-1" aria-label="上一张">←</button><span>左右滑动浏览照片</span><button type="button" data-photo-dir="1" aria-label="下一张">→</button></div></div>
