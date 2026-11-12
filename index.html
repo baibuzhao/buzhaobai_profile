@@ -153,6 +153,9 @@
     </main>
     <footer>© 2026 个人网站 · 内容与照片持续补充中</footer>
     <script>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+      window.addEventListener('pageshow', () => window.scrollTo(0, 0));
       document.querySelectorAll('[data-photo-dir]').forEach((button) => button.addEventListener('click', () => {
         const track = button.closest('.photo-carousel').querySelector('.photo-track');
         track.scrollBy({ left: button.dataset.photoDir * track.clientWidth, behavior: 'smooth' });
