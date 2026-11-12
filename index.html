@@ -196,7 +196,7 @@
           const next = track.scrollLeft + track.clientWidth;
           track.scrollTo({ left: next >= track.scrollWidth - 2 ? 0 : next, behavior: 'smooth' });
         };
-        const start = () => { clearInterval(timer); timer = setInterval(advance, 5000); };
+        const start = () => { clearInterval(timer); timer = setInterval(advance, 1667); };
         carousel.addEventListener('mouseenter', () => { paused = true; });
         carousel.addEventListener('mouseleave', () => { paused = false; });
         carousel.addEventListener('focusin', () => { paused = true; });
