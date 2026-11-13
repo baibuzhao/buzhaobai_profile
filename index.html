@@ -63,8 +63,8 @@
       .card small { color: var(--muted); font: 12px ui-monospace, SFMono-Regular, monospace; letter-spacing: .1em; }
       .card h3 { margin: 52px 0 12px; font-size: 26px; font-weight: 600; }
       .card p { margin-bottom: 0; color: var(--muted); line-height: 1.75; }
-      .timeline { display: grid; gap: 14px; }
-      .timeline-item { display: grid; grid-template-columns: 42% 1fr; align-items: stretch; min-height: 245px; padding: 0; border: 1px solid var(--ink); border-radius: 18px; background: #123e55; overflow: hidden; }\n      .timeline-item img { width: 100%; height: 100%; min-height: 245px; object-fit: cover; display: block; }\n      .timeline-item strong { align-self: start; padding: 30px 26px; font-size: 28px; font-weight: 600; }
+      .timeline { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .timeline-item { display: grid; grid-template-columns: 42% 1fr; align-items: stretch; min-height: 245px; padding: 0; border: 1px solid var(--ink); border-radius: 18px; background: #123e55; overflow: hidden; }\n      .timeline-item img { width: 100%; height: 245px; min-height: 245px; object-fit: cover; display: block; }\n      .timeline-item strong { align-self: center; padding: 26px; font-size: 28px; font-weight: 600; }
       .timeline-item strong { font-size: 28px; font-weight: 600; }
       .timeline-item p { margin: 4px 0 0; color: var(--muted); line-height: 1.7; }
       .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -95,7 +95,7 @@
         .hero, .section-heading, .vibe-box { grid-template-columns: 1fr; }
         .hero { min-height: auto; padding: 60px 0 84px; }
         .portrait-placeholder { min-height: 300px; } .photo-carousel { height: 360px; }
-        .cards, .project-grid, .life-grid { grid-template-columns: 1fr; } .project-card { grid-template-columns: 42% 1fr; }
+        .cards, .project-grid, .life-grid, .timeline { grid-template-columns: 1fr; } .project-card { grid-template-columns: 42% 1fr; }
         .timeline-item { grid-template-columns: 42% 1fr; }
       }
       @media (max-width: 520px) {
