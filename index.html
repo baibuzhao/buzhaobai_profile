@@ -66,6 +66,9 @@
       .timeline { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
       .timeline-item { display: grid; grid-template-columns: 42% 1fr; align-items: stretch; min-height: 245px; padding: 0; border: 1px solid var(--ink); border-radius: 18px; background: #123e55; overflow: hidden; }\n      .timeline-item img { width: 100%; height: 245px; min-height: 245px; object-fit: cover; display: block; }\n      .timeline-item strong { align-self: start; justify-self: start; padding: 26px 30px; font-size: 28px; font-weight: 600; }\n      .timeline .education-card p { align-self: start; padding: 26px; font-size: 14px; line-height: 1.65; }\n      .timeline .education-card p strong { display: block; margin-bottom: 8px; font-size: 24px; font-weight: 600; }\n      .timeline .education-card p small { color: var(--muted); font-size: 12px; }
       .timeline-item strong { font-size: 28px; font-weight: 600; }
+      .portfolio-card { grid-template-columns: 1fr; }
+      .portfolio-card-copy { display: grid; place-items: start; min-height: 245px; padding: 26px 30px; }
+      .portfolio-card-copy strong { font-size: 28px; font-weight: 600; }
       .timeline-item p { margin: 4px 0 0; color: var(--muted); line-height: 1.7; }
       .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
       .project { padding: 26px; border: 1px solid var(--ink); border-radius: 18px; background: #123e55; } .project-card { display: grid; grid-template-columns: 42% 1fr; align-items: stretch; gap: 0; padding: 0; overflow: hidden; } .project-card img { width: 100%; height: 100%; min-height: 245px; object-fit: cover; display: block; } .project-card .hobby-copy { align-self: start; padding: 30px 26px; } .project-card .hobby-copy h3 { margin: 0 0 14px; font-size: 28px; font-weight: 600; } .project-card .hobby-copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
@@ -115,6 +118,7 @@
       <nav aria-label="主导航">
         <a href="#coordinates">教育背景</a>
         <a href="#experience">工作经历</a>
+        <a href="#portfolio">个人作品</a>
         <a href="#projects">兴趣爱好</a>
         <a href="#vibe">旅行见闻</a>
       </nav>
@@ -142,6 +146,13 @@
         <div class="timeline">
           <article class="card education-card"><img src="photos/bytedance.jpg" alt="字节跳动工作卡牌" /><p><strong>字节跳动｜飞书AI产品经理</strong><br /><small>关键词：AI Agent · 产品策略 · 大模型评测</small><br />参与飞书Table Agent的产品策略设计与能力优化，探索AI从意图理解到自主规划、任务执行的完整链路。建立了对AI Agent技术架构与评测体系的系统认知，提升了技术理解、结构化思考及数据驱动的产品决策能力。</p></article>
           <article class="card education-card"><img src="photos/tencent.jpg" alt="腾讯工作卡牌" /><p><strong>腾讯｜元宝 AI 产品经理</strong><br /><small>关键词：对话式 AI · 用户体验 · 产品增长</small><br />参与元宝AI语音通话及模拟面试Agent的产品设计与体验优化，推动AI在真实场景中的落地。深化了对用户需求、AI交互与产品增长的理解，培养了从问题洞察、策略设计到跨团队协作落地的完整产品能力。</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="portfolio">
+        <div class="section-heading"><div><h2>个人作品</h2></div></div>
+        <div class="timeline">
+          <article class="card education-card portfolio-card"><div class="portfolio-card-copy"><strong>个人作品</strong></div></article>
         </div>
       </section>
 
